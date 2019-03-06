@@ -3,7 +3,9 @@ from sklearn import linear_model
 import matplotlib.pyplot as plt
 
 # read data
-dataframe = pd.read_fwf('brain_body.txt')
+# dataframe = pd.read_fwf('brain_body.txt') 
+dataframe = pd.read_csv('challenge_dataset.txt', sep=',', 
+	header=None, names=['Brain', 'Body'])
 
 # brain measurments
 x_values = dataframe[['Brain']]
